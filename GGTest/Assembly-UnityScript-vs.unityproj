@@ -46,7 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\InfiniteRunner\Scripts\BackGround\ads.js" />
+     <Compile Include="Assets\InfiniteRunner\Scripts\Character\asdasd.js" />
      <None Include="Assets\Fonts\LuckiestGuy\LICENSE.txt" />
      <None Include="Assets\Example Games\Hat Trick\_ReadMe.txt" />
      <None Include="Assets\Example Games\Hat Trick\Fonts\LuckiestGuy\LICENSE.txt" />
