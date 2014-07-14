@@ -1,17 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\InfiniteRunner\Scripts\Character\PlayerController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\InfiniteRunner\Scripts\Configuration\GUI_Painter.cs">
     <Files>
-      <File FileName="GGTest.sln" Line="40" Column="1" />
-      <File FileName="Assets\InfiniteRunner\Scripts\Character\PlayerController.cs" Line="38" Column="47" />
-      <File FileName="Assets\InfiniteRunner\Scripts\BackGround\Scrolling.cs" Line="1" Column="1" />
-      <File FileName="Assets\InfiniteRunner\Scripts\Character\Rotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\InfiniteRunner\Scripts\Character\GeneralMovement.cs" Line="52" Column="2" />
+      <File FileName="Assets\InfiniteRunner\Scripts\Configuration\GUI_Painter.cs" Line="6" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Users\Gerzan.Mendez\Documents\GGTestGit\UnityRepository\GGTest\Assets\InfiniteRunner\Scripts\Character\PlayerController.cs" line="51" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

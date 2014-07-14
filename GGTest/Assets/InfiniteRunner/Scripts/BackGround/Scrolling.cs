@@ -11,7 +11,7 @@ public class Scrolling : MonoBehaviour {
 	}
 
 	private void doScroll(){
-		renderer.material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
+		renderer.material.mainTextureOffset = new Vector2 ((Time.time * speed)%1, 0f);
 	}
 
 }

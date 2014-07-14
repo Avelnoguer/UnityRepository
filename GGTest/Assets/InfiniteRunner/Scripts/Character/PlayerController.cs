@@ -6,63 +6,65 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 2f;
 	public float maxSize = 1.5f;
 	public float minSize = 0.8f;
-	public float gradual = 0.01f;
+	public float resizingSpeed = 0.01f;
 
-	private Vector3 finalSize = new Vector3 ();
+	public float maxUpperMovement = 0.4f;
+	public float maxBottomMovement = -3f;
 
-	void Start(){
-	
-		finalSize = transform.localScale;
-	
-	}
+
 
 	void Update() {
-
-		Vector3 dir = Vector3.zero;
-
-		float accel = Input.acceleration.x;
-		dir.y = accel;
-		ReSizeCharacter (accel);
-		dir.z = 0f;
-		dir.x = 0f;//Input.acceleration.x;
-		if (dir.sqrMagnitude > 1)
-			dir.Normalize();
-		
-		dir *= Time.deltaTime;
-		transform.Translate(dir * speed);
-	
+		move ();
 	}
 
-	private void ReSizeCharacter(float value){
+	private void move(){
 
-		Vector3 currentScale = transform.localScale;
+		Vector3 dir = Vector3.zero;
+		
+		float accel = Input.acceleration.x;
+		dir.y = accel;
+		Resize ();
+		//ReSizeCharacter (accel);
+		dir.z = 0f;
+		dir.x = 0f;
+		if (dir.sqrMagnitude > 1)
+			dir.Normalize();
+
+
+		dir *= Time.deltaTime;
+
+		transform.Translate(dir * speed);
+		rigidbody2D.position = new Vector3 (0.0f,
+		                                  Mathf.Clamp (transform.position.y,maxBottomMovement,maxUpperMovement),
+		                                  0.0f);
+
+	}
+
+
+
+	/*private void ReSizeCharacter(float value){
 
 		if (value > 0) {
 
-			if(finalSize.x >= minSize && finalSize.y >= minSize){
-				finalSize.x -= gradual;
-				finalSize.y -= gradual;
-				finalSize.z = 1;
-			}
-				
+			//doMaths(maxUpperMovement,minSize,true);		
 		} 
 
 		else {
 
-			if(finalSize.x <= maxSize && finalSize.y <= maxSize){
-
-				finalSize.x += gradual;
-				finalSize.y += gradual;
-				finalSize.z = 1;
-			}
-
+			//doMaths(maxBottomMovement,maxSize,false);
 		}
 
-		transform.localScale = Vector3.Lerp(transform.localScale);
+	}*/
 
-		transform.localScale = finalSize;
+
+	private void Resize(){
+
+		float currentY = Mathf.Clamp(transform.position.y,maxBottomMovement,maxUpperMovement);
+		float finalXYScale = Mathf.Abs((currentY * maxSize) / maxBottomMovement);
+		finalXYScale = Mathf.Clamp (finalXYScale, minSize, maxSize);
+		transform.localScale = new Vector3 (finalXYScale, finalXYScale, 1f);
+
+
 	}
-	
-
 
 }
