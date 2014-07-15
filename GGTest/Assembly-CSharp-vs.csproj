@@ -58,6 +58,7 @@
      <Compile Include="Assets\InfiniteRunner\Scripts\Character\GeneralMovement.cs" />
      <Compile Include="Assets\InfiniteRunner\Scripts\Character\PlayerController.cs" />
      <Compile Include="Assets\InfiniteRunner\Scripts\Character\Rotator.cs" />
+     <Compile Include="Assets\InfiniteRunner\Scripts\Character\ShadownController.cs" />
      <Compile Include="Assets\InfiniteRunner\Scripts\Character\Spanwer.cs" />
      <Compile Include="Assets\InfiniteRunner\Scripts\Configuration\GUI_Painter.cs" />
      <Compile Include="Assets\InfiniteRunner\Scripts\Configuration\RetryListener.cs" />
