@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour {
 		float accel = Input.acceleration.x;
 		dir.y = accel;
 		Resize ();
-		//ReSizeCharacter (accel);
 		dir.z = 0f;
 		dir.x = 0f;
 		if (dir.sqrMagnitude > 1)
@@ -39,23 +38,6 @@ public class PlayerController : MonoBehaviour {
 		                                  0.0f);
 
 	}
-
-
-
-	/*private void ReSizeCharacter(float value){
-
-		if (value > 0) {
-
-			//doMaths(maxUpperMovement,minSize,true);		
-		} 
-
-		else {
-
-			//doMaths(maxBottomMovement,maxSize,false);
-		}
-
-	}*/
-
 
 	private void Resize(){
 
